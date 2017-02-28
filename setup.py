@@ -15,5 +15,5 @@ setup(
               'pyflann.util', 'pyflann.lib'],
     package_dir={'pyflann.lib': 'pyflann/lib'},
     package_data={'pyflann.lib': [
-        'darwin/*.dylib', 'win32/x86/*.dll', 'win32/x64/*.dll', 'linux/*.so']},
+        'darwin/*.dylib', 'darwin/*.so', 'win32/x86/*.dll', 'win32/x64/*.dll', 'linux/*.so']},
 )

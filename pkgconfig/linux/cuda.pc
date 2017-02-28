@@ -1,0 +1,11 @@
+prefix=/usr/local/cuda
+libdir=${prefix}/lib64
+includedir=${prefix}/include
+Name: cuda
+Description: Nvidia CUDA libraries for accelerated computing
+Version: 8.0
+URL: https://developer.nvidia.com/cuda-zone
+Libs: -L${libdir}
+Libs.private: -L${libdir}
+Cflags: -I${includedir}
+
