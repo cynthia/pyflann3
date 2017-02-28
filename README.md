@@ -1,6 +1,11 @@
 pyflann3
 ========
 
+NOTA BENE
+---------
+
+This is currently a work in progress. If this works out of the box, good. Otherwise it would be worth noting that it's work in progress.
+
 Introduction
 ------------
 
