@@ -24,4 +24,8 @@
 #(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 #THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-from dataset import *
+from .dataset import *
+from .binary_dataset import *
+from .dat_dataset import *
+from .hdf5_dataset import *
+from .npy_dataset import *

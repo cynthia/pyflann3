@@ -1,33 +1,33 @@
-pyflann
-=============
+pyflann3
+========
 
-###1. Introduction
+Introduction
+------------
 
-pyflann is the python bindings for [FLANN - Fast Library for Approximate Nearest Neighbors](http://www.cs.ubc.ca/research/flann/).
+This is a fork of the abandoned [pyflann](https://github.com/primetang/pyflann) project, which is a Python wrapper for
+Marius Muja's excellent [FLANN - Fast Library for Approximate Nearest Neighbors](http://www.cs.ubc.ca/research/flann/).
 
-###2. Install
+Improvements over the original project:
 
-#### For python2
+1. Python 3.x compatibility.
+2. Pre-built libraries bundled are optimized with the Intel compiler and performance libraries.
 
-This package uses distutils, which is the default way of installing python modules. To install in your home directory, securely run the following:
-```
-git clone https://github.com/primetang/pyflann.git
-cd pyflann
-[sudo] python setup.py install
-```
+Installation
+------------
 
-Or directly through `pip` to install it:
-```
-[sudo] pip install pyflann
-```
+Packages are not provided via PyPI, for the following reasons:
 
-#### For python3
+1. Intel library dependencies.
+2. To prevent pollution of PyPI with half baked, abandoned forks.
 
-Please refer to [this issuse](https://github.com/primetang/pyflann/issues/1) to modify the code.
+    git clone https://github.com/cynthia/pyflann3.git
+    pip install -e pyflann3
 
-###3. Usage
+Examples
+--------
 
-Use it just like the following code:
+Examples have been taken from the original documentation:
+
 ```python
 from pyflann import *
 import numpy as np
@@ -44,14 +44,14 @@ testset = np.array(
 flann = FLANN()
 result, dists = flann.nn(
     dataset, testset, 2, algorithm="kmeans", branching=32, iterations=7, checks=16)
-print result
-print dists
+print(result)
+print(dists)
 
 dataset = np.random.rand(10000, 128)
 testset = np.random.rand(1000, 128)
 flann = FLANN()
 result, dists = flann.nn(
     dataset, testset, 5, algorithm="kmeans", branching=32, iterations=7, checks=16)
-print result
-print dists
+print(result)
+print(dists)
 ```
