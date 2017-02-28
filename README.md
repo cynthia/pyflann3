@@ -24,6 +24,7 @@ Packages are not provided via PyPI, for the following reasons:
 
 1. Intel library dependencies.
 2. To prevent pollution of PyPI with half baked, abandoned forks.
+3. Pre-built binaries only have 64-bit support.
 
     git clone https://github.com/cynthia/pyflann3.git
     pip install -e pyflann3
